@@ -1,0 +1,1 @@
+<button type="button" class="btn btn-warning ms-2" @click="destroy">Odstranit</button>
