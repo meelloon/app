@@ -13,7 +13,8 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://unpkg.com/vue@3"></script>
-        <script src="{{ url('js/app.js?' . filemtime('js/app.js')) }}"></script>
+        <script src="{{ url('js/form.js?' . filemtime('js/form.js')) }}"></script>
+        <script src="{{ url('js/list.js?' . filemtime('js/list.js')) }}"></script>
 
     </head>
 

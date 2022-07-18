@@ -41,7 +41,9 @@ class PartController extends Controller
      */
     public function store(PartFormRequest $request)
     {
-        if (Part::create($request->validated())) return redirect()->route('parts.index');
+        $validated_data = $request->validated();
+
+        if (Part::create($validated_data)) return redirect()->route('parts.index');
     }
 
     /**
@@ -74,7 +76,9 @@ class PartController extends Controller
      */
     public function update(PartFormRequest $request, Part $part)
     {
-        if ($part->update($request->validated())) return redirect()->route('parts.index');
+        $validated_data = $request->validated();
+
+        if ($part->update($validated_data)) return redirect()->route('parts.index');
     }
 
     /**

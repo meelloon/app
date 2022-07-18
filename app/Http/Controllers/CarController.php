@@ -38,7 +38,9 @@ class CarController extends Controller
      */
     public function store(CarFormRequest $request)
     {
-        if (Car::create($request->validated())) return redirect()->route('cars.index');
+        $validated_data = $request->validated();
+
+        if (Car::create($validated_data)) return redirect()->route('cars.index');
     }
 
     /**
@@ -70,7 +72,9 @@ class CarController extends Controller
      */
     public function update(CarFormRequest $request, Car $car)
     {
-        if ($car->update($request->validated())) return redirect()->route('cars.index');
+        $validated_data = $request->validated();
+
+        if ($car->update($validated_data)) return redirect()->route('cars.index');
     }
 
     /**

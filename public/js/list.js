@@ -47,16 +47,6 @@ const list = Vue.createApp({
     }
 });
 
-const form = Vue.createApp({
-    methods: {
-
-        destroy() {
-            document.getElementById('form_delete').submit();
-        }
-        
-    }
-});
-
 function initialData()
 {
     return modelViewed() == 'cars' ? cars : parts;
